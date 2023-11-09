@@ -1,0 +1,79 @@
+
+
+.c-datepicker {
+  display: inline-flex;
+  flex-direction: column;
+
+  &__date-field-container {
+      position: relative;
+
+      .c-react-aria__button {
+          position: absolute;
+          top: 50%;
+          right: 0;
+          color: lightgray;
+          transform: translate(-50%, -50%);
+          cursor: pointer;
+
+          svg {
+              height: unset;
+          }
+      }
+  }
+
+  &__range {
+      .c-datepicker__date-field-container {
+          display: flex;
+          align-items: center;
+
+          .arrow {
+              width: 20px;
+              height: 12px;
+          }
+      }
+
+      .c-datepicker__date-field-inner-container {
+          position: relative;
+      }
+  }
+
+  &__label {
+      --label-font-size: 12px;
+
+      color: lightgray;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+  }
+}
+
+.year-calendar {
+  display: inline-block;
+}
+
+.year-calendar__header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 8px 12px 8px;
+}
+
+.year-calendar__dropdowns {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: center;
+}
+
+.year-calendar__month {
+  padding: 10px;
+  cursor: pointer;
+
+  &:hover {
+      background: lightblue;
+  }
+  &:focus {
+      background: pink;
+  }
+}
